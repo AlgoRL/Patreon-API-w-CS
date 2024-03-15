@@ -1,0 +1,18 @@
+<Window x:Class="PatreonAPIWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PatreonAPIWPF"
+        mc:Ignorable="d"
+        Title="Patreon API Example" Height="160" Width="600">
+    <Grid>
+        <Button Content="Get Authentication Code" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="180" Click="Button_Click"/>
+        <Label x:Name="TokenLabel" Content="Access Token" HorizontalAlignment="Left" Margin="196,42,0,0" VerticalAlignment="Top" Width="494" Height="37"/>
+        <Button Content="Get Access Token" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="180" Click="Button_Click2"/>
+        <Button Content="Get User Email" HorizontalAlignment="Left" Margin="11,78,0,0" VerticalAlignment="Top" Width="180" Click="Button_Click3"/>
+        <Label x:Name="ResultLabel" Content="Email" HorizontalAlignment="Left" Margin="196,73,0,0" VerticalAlignment="Top" Width="680" Height="49"/>
+        <Label x:Name="OAuthLabel" Content="OAuth Code" HorizontalAlignment="Left" Margin="196,10,0,0" VerticalAlignment="Top" Width="680" Height="27"/>
+
+    </Grid>
+</Window>

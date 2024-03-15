@@ -1,0 +1,29 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patreon Redirect</title>
+</head>
+<style> body {background-color: black; color:white;}</style>
+<body>
+    <h1 id="StatusHeader">Processing API...</h1>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const authorizationCode = urlParams.get('code');
+
+        if (authorizationCode) {
+
+                        fetch('http://localhost:8080/data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(authorizationCode)
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('StatusHeader').innerText = 'Success! You can close this window now.';
+            })
+            .catch(error => alert('Error:', error));
+        }
+    </script>
+</body>
